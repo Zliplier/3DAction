@@ -48,11 +48,23 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ShadowMaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ShadowTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ShineReflectionTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ShineTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UnlitMaskTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -75,15 +87,18 @@ Material:
     - _OutlineStrength: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RampOffset: 0
+    - _RampOffset: -0.2
+    - _RimStrength: 5
     - _RimThreshold: 0
     - _Smoothness: 0
     m_Colors:
-    - _InlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - White: {r: 1, g: 1, b: 1, a: 1}
+    - _InlineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _LightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShadowColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
-    - _TintColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShadowColor: {r: 0.9528302, g: 0.57079923, b: 0.57079923, a: 1}
+    - _TintColor: {r: 0.5593464, g: 0.8117647, b: 0.5019608, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &5380088804739446430

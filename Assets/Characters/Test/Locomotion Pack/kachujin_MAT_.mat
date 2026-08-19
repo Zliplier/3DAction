@@ -134,6 +134,7 @@ Material:
     - _Alpha: 1
     - _AlphaClip: 0
     - _AlphaToMask: 0
+    - _AttenuationStrength: 1
     - _BandBlend: 0.03
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
@@ -162,13 +163,13 @@ Material:
     - _Parallax: 0.02
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RampOffset: -0.07
+    - _RampOffset: 0.52
     - _ReadMask: 255
     - _ReceiveShadows: 1
-    - _RimStrength: 5
+    - _RimStrength: 1.37
     - _ShadowSmoothing: 0.01
     - _ShadowSteps: 3
-    - _Smoothness: 0
+    - _Smoothness: 0.1
     - _SmoothnessTextureChannel: 0
     - _SpecSize: 2
     - _SpecSmoothing: 0
@@ -198,8 +199,8 @@ Material:
     - _LightColorTint: {r: 1, g: 1, b: 1, a: 1}
     - _MidColor: {r: 0.7075472, g: 0.67631334, b: 0.6040851, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShadowColor: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
+    - _RimColor: {r: 1, g: 0.75332725, b: 0, a: 1}
+    - _ShadowColor: {r: 0.73819816, g: 0.66082233, b: 0.8490566, a: 1}
     - _SpecColor: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

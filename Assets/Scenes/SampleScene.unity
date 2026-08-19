@@ -240,7 +240,7 @@ Transform:
   m_GameObject: {fileID: 175204077}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5467316, y: -0.44843417, z: 0.4484248, w: 0.54672354}
-  m_LocalPosition: {x: -0.89, y: 1.445, z: 15.31}
+  m_LocalPosition: {x: -6.03, y: 3.258, z: 8.862}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -474,13 +474,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.32249752, y: -0.58573705, z: 0.2731343, w: 0.69159615}
+  m_LocalRotation: {x: 0.2532897, y: -0.72549707, z: 0.33830503, w: 0.5431832}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -80.525, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -106.355, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 613775372}
   - component: {fileID: 613775371}
   - component: {fileID: 613775370}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -769,7 +769,7 @@ Transform:
   m_GameObject: {fileID: 613775369}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.043, y: 1.87, z: 7.668}
+  m_LocalPosition: {x: -0.4, y: 1.87, z: 4.568}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -832,8 +832,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 2
-  m_Color: {r: 0.46160364, g: 0, b: 1, a: 1}
-  m_Intensity: 26.02
+  m_Color: {r: 0.5698924, g: 0, b: 1, a: 1}
+  m_Intensity: 8.8
   m_Range: 4.33
   m_SpotAngle: 21.80208
   m_InnerSpotAngle: 21.80208
@@ -896,7 +896,7 @@ Transform:
   m_GameObject: {fileID: 747749469}
   serializedVersion: 2
   m_LocalRotation: {x: -0.43046334, y: -0.5609899, z: 0.5609826, w: 0.4304534}
-  m_LocalPosition: {x: 2, y: 2.5, z: -12.93}
+  m_LocalPosition: {x: -6.58, y: 2.5, z: 8.294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -969,11 +969,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 317429411a93141428ea09e23deb7342, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.338
+      value: -4.529
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 317429411a93141428ea09e23deb7342, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.78195125
+      value: 0.5669233
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 317429411a93141428ea09e23deb7342, type: 3}
       propertyPath: m_LocalRotation.x
@@ -981,7 +981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 317429411a93141428ea09e23deb7342, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6233397
+      value: 0.8237706
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 317429411a93141428ea09e23deb7342, type: 3}
       propertyPath: m_LocalRotation.z
@@ -993,7 +993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 317429411a93141428ea09e23deb7342, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 77.121
+      value: 110.928
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 317429411a93141428ea09e23deb7342, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1593,7 +1593,7 @@ GameObject:
   - component: {fileID: 1329480265}
   - component: {fileID: 1329480264}
   - component: {fileID: 1329480263}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube For Scale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1687,7 +1687,7 @@ Transform:
   m_GameObject: {fileID: 1329480262}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.114, y: 5.413, z: 8.554}
+  m_LocalPosition: {x: -0.17, y: 1.709, z: 9.018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1705,7 +1705,7 @@ GameObject:
   - component: {fileID: 1785524463}
   - component: {fileID: 1785524462}
   - component: {fileID: 1785524461}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1799,7 +1799,7 @@ Transform:
   m_GameObject: {fileID: 1785524460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.84, y: 3.5, z: 8.349}
+  m_LocalPosition: {x: 0.01, y: 3.559, z: 5.719}
   m_LocalScale: {x: 1.8714211, y: 1.8714211, z: 1.8714211}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1862,7 +1862,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 2
-  m_Color: {r: 1, g: 0, b: 0.2997303, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.10208988, a: 1}
   m_Intensity: 21.1
   m_Range: 4.33
   m_SpotAngle: 21.80208
@@ -1926,7 +1926,7 @@ Transform:
   m_GameObject: {fileID: 1838436768}
   serializedVersion: 2
   m_LocalRotation: {x: -0.43046334, y: -0.5609899, z: 0.5609826, w: 0.4304534}
-  m_LocalPosition: {x: -1.645, y: 1.505, z: -5.003}
+  m_LocalPosition: {x: -6.42, y: 2.074, z: -4.726}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

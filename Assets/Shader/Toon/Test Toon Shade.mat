@@ -82,23 +82,24 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Alpha: 1
     - _Metalic: 0
     - _NormalStrength: 0
     - _OutlineStrength: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RampOffset: -0.2
-    - _RimStrength: 5
+    - _RampOffset: 0.04
+    - _RimStrength: 1.49
     - _RimThreshold: 0
-    - _Smoothness: 0
+    - _Smoothness: 0.663
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
     - _InlineColor: {r: 1, g: 1, b: 1, a: 1}
-    - _LightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _LightColor: {r: 0.5294118, g: 0.8588236, b: 0.2784314, a: 1}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
-    - _RimColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShadowColor: {r: 0.9528302, g: 0.57079923, b: 0.57079923, a: 1}
-    - _TintColor: {r: 0.5593464, g: 0.8117647, b: 0.5019608, a: 1}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShadowColor: {r: 0.49803925, g: 0.5882353, b: 0.427451, a: 1}
+    - _TintColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &5380088804739446430

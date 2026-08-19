@@ -111,6 +111,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AddPrecomputedVelocity: 0
+    - _Alpha: 1
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
@@ -136,10 +137,10 @@ Material:
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RampOffset: 0.44
+    - _RampOffset: -0.52
     - _ReceiveShadows: 1
-    - _RimStrength: 5
-    - _Smoothness: 0.5
+    - _RimStrength: 1.18
+    - _Smoothness: 0.476
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -156,7 +157,7 @@ Material:
     - _LightColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShadowColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
+    - _ShadowColor: {r: 0.9433962, g: 0.90268385, b: 0.84994656, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

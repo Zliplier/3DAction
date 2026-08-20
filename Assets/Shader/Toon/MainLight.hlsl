@@ -6,8 +6,7 @@
 void MainLight_float(float3 Position, float3 Normal, float3 View, out float3 Color, out float3 Direction, out float Attenuation)
 {
     #if defined(SHADERGRAPH_PREVIEW)
-    Color = float3(0.5, 0.5, 0);
-    Direction = float3(0.5, 0.5, 0);
+    Color = float3(0.5f, 0.5f, 0.5f);
     #else
     //Calculate Shadow Coord
     #if SHADOWS_SCREEN

@@ -20,7 +20,7 @@ void MainLight_float(float3 Position, float3 Normal, float3 View, out float3 Col
     View = SafeNormalize(View);
 
     Light light = GetMainLight(shadowCoord);
-    Color = saturate(light.color);
+    Color = light.color;
     Direction = light.direction;
     Attenuation = light.shadowAttenuation;
     #endif

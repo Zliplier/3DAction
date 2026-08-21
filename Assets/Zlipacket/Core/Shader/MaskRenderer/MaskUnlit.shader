@@ -1,4 +1,4 @@
-Shader "OutlineMaskUnlit"
+Shader "MaskUnlit"
 {
     SubShader
     {

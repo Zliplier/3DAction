@@ -89,7 +89,7 @@ Material:
     - _OutlineStrength: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RampOffset: 0.4
+    - _RampOffset: 0.7
     - _RimStrength: 1.11
     - _RimThreshold: 0
     - _Smoothness: 0.645
@@ -100,7 +100,7 @@ Material:
     - _LightColor: {r: 0.5148248, g: 1, b: 0.36320752, a: 1}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShadowColor: {r: 0.40784314, g: 0.6, b: 0.49419776, a: 1}
+    - _ShadowColor: {r: 0, g: 0.41509432, b: 0.22359017, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -4,27 +4,32 @@ using UnityEngine.Rendering.RenderGraphModule;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Experimental.Rendering;
 
-public class OutlineMaskRendererFeature : ScriptableRendererFeature
+public class LayerMaskRendererFeature : ScriptableRendererFeature
 {
     [System.Serializable]
     public class Settings
     {
-        public LayerMask outlineLayer;
+        public LayerMask layerMask;
         public RenderPassEvent passEvent = RenderPassEvent.AfterRenderingOpaques;
+
+        [Tooltip("Name of the global texture this pass exposes, e.g. _OutlineMaskTexture, _InteractableMaskTexture, etc.")]
+        public string maskTextureName = "_MaskTexture";
+
+        [Tooltip("Shader tag pass to draw (usually UniversalForward, sometimes SRPDefaultUnlit for unlit-only masks).")]
+        public string shaderTagId = "UniversalForward";
     }
 
     public Settings settings = new Settings();
-    public Shader maskShader; // ← drag OutlineMaskUnlit.shader in here in the Inspector
+    public Shader maskShader;
 
     Material m_MaskMaterial;
-    OutlineMaskPass m_Pass;
+    LayerMaskPass m_Pass;
 
-    static readonly int MaskTextureId = Shader.PropertyToID("_OutlineMaskTexture");
-
-    class OutlineMaskPass : ScriptableRenderPass
+    class LayerMaskPass : ScriptableRenderPass
     {
         Settings settings;
         Material maskMaterial;
+        int maskTextureId;
 
         class PassData { public RendererListHandle rendererList; }
 
@@ -33,6 +38,8 @@ public class OutlineMaskRendererFeature : ScriptableRendererFeature
             settings = s;
             maskMaterial = mat;
             renderPassEvent = s.passEvent;
+            maskTextureId = Shader.PropertyToID(s.maskTextureName);
+            profilingSampler = new ProfilingSampler(s.maskTextureName);
         }
 
         public override void RecordRenderGraph(RenderGraph renderGraph, ContextContainer frameData)
@@ -44,27 +51,27 @@ public class OutlineMaskRendererFeature : ScriptableRendererFeature
             var maskTex = renderGraph.CreateTexture(new TextureDesc(desc.width, desc.height)
             {
                 colorFormat = GraphicsFormat.R8_UNorm,
-                name = "_OutlineMaskTexture",
+                name = settings.maskTextureName,
                 clearBuffer = true,
                 clearColor = Color.clear
             });
 
             var sorting = new SortingSettings(cameraData.camera) { criteria = SortingCriteria.CommonOpaque };
-            var drawing = new DrawingSettings(new ShaderTagId("UniversalForward"), sorting)
+            var drawing = new DrawingSettings(new ShaderTagId(settings.shaderTagId), sorting)
             {
                 overrideMaterial = maskMaterial
             };
-            var filtering = new FilteringSettings(RenderQueueRange.opaque, settings.outlineLayer);
+            var filtering = new FilteringSettings(RenderQueueRange.opaque, settings.layerMask);
             var listParams = new RendererListParams(renderingData.cullResults, drawing, filtering);
             var rendererList = renderGraph.CreateRendererList(listParams);
 
-            using var builder = renderGraph.AddRasterRenderPass<PassData>("Outline Mask", out var passData);
+            using var builder = renderGraph.AddRasterRenderPass<PassData>($"{settings.maskTextureName} Pass", out var passData);
             passData.rendererList = rendererList;
             builder.UseRendererList(rendererList);
             builder.SetRenderAttachment(maskTex, 0, AccessFlags.Write);
-            builder.SetGlobalTextureAfterPass(maskTex, MaskTextureId); // exposes it to the Full Screen Pass Feature below
+            builder.SetGlobalTextureAfterPass(maskTex, maskTextureId);
             builder.AllowPassCulling(false);
-            
+
             builder.SetRenderFunc((PassData data, RasterGraphContext ctx) =>
                 ctx.cmd.DrawRendererList(data.rendererList));
         }
@@ -74,7 +81,7 @@ public class OutlineMaskRendererFeature : ScriptableRendererFeature
     {
         if (maskShader != null)
             m_MaskMaterial = CoreUtils.CreateEngineMaterial(maskShader);
-        m_Pass = new OutlineMaskPass();
+        m_Pass = new LayerMaskPass();
     }
 
     public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
